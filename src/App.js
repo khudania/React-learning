@@ -15,8 +15,6 @@ const app = props => {
   //   ]
   // }
 
-
-
   // render() {
 
   const [personState, setPersonsState] = useState(
