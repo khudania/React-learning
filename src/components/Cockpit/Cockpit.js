@@ -7,11 +7,21 @@ const cockpit = (props) => {
   useEffect(() => {
     console.log('[cockpit.js]! useEffect')
     // HTTP Request
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       alert('Saved Data in Server')
     }, 1000)
+    return () => {
+      clearTimeout(timer)
+      console.log('[cockpit.js]! CLeanup work in useEffect')
+    }
   }, [])
 
+  useEffect(() => {
+    console.log('[Cockpit.js]! This is my 2nd useEffect')
+    return () => {
+      console.log('[cockpit.js]! CLeanup work in 2nd useEffect')
+    }
+  })
 
   const assignedClasses = [];
   let btnClass = '';
