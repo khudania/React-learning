@@ -6,7 +6,13 @@ const cockpit = (props) => {
 
   useEffect(() => {
     console.log('[cockpit.js]! useEffect')
-  })
+    // HTTP Request
+    setTimeout(() => {
+      alert('Saved Data in Server')
+    }, 1000)
+  }, [])
+
+
   const assignedClasses = [];
   let btnClass = '';
   if (props.showPersons) {
